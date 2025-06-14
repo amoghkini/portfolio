@@ -42,6 +42,59 @@ export default function Home() {
         </section>
       </AnimateIn>
 
+
+      <AnimateIn variant="fadeUp" delay={0.4}>
+        <section className="mb-12">
+          <AnimateIn variant="reveal" delay={0.5}>
+            <h2 className="text-lg font-medium tracking-tight mb-4 inline-block">Experience</h2>
+          </AnimateIn>
+          <div className="space-y-8">
+            <ul className="space-y-8">
+              {visibleExperience.map((job, index) => {
+                const delay = 0.5 + (index < initialExperienceCount ? index : index - initialExperienceCount) * 0.1;
+                return (
+                  <AnimateIn key={index} variant="fadeLeft" delay={delay}>
+                    <li className="group hover:translate-x-1 transition-all duration-300 ease-out">
+                      <div className="flex flex-col sm:flex-row sm:items-baseline justify-between mb-1">
+                        <h3 className="text-md font-medium">
+                          {job.role} {job.role === "Freelance" ? "" : "at"} {job.company}
+                        </h3>
+                        <span className="text-xs text-zinc-400 dark:text-zinc-500">{job.period}</span>
+                      </div>
+                      <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-2">{job.description}</p>
+                      <div className="flex flex-wrap gap-2">
+                        {job.technologies.map((tech, techIndex) => (
+                          <span key={techIndex} className="text-xs text-zinc-400 dark:text-zinc-500">
+                            {tech}
+                            {techIndex < job.technologies.length - 1 ? " /" : ""}
+                          </span>
+                        ))}
+                      </div>
+                    </li>
+                  </AnimateIn>
+                );
+              })}
+            </ul>
+            {experience.length > initialExperienceCount && (
+              <button
+                onClick={() => setIsExperienceExpanded(!isExperienceExpanded)}
+                className="flex items-center gap-2 text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors mx-auto"
+              >
+                {isExperienceExpanded ? (
+                  <>
+                    Show Less <ChevronUp className="w-4 h-4" />
+                  </>
+                ) : (
+                  <>
+                    Show More Experience <ChevronDown className="w-4 h-4" />
+                  </>
+                )}
+              </button>
+            )}
+          </div>
+        </section>
+      </AnimateIn>
+      
       <AnimateIn variant="fadeUp" delay={0.2}>
         <section className="mb-12">
           <AnimateIn variant="reveal" delay={0.3}>
@@ -110,58 +163,6 @@ export default function Home() {
                 )}
               </button>
             )} */}
-          </div>
-        </section>
-      </AnimateIn>
-
-      <AnimateIn variant="fadeUp" delay={0.4}>
-        <section className="mb-12">
-          <AnimateIn variant="reveal" delay={0.5}>
-            <h2 className="text-lg font-medium tracking-tight mb-4 inline-block">Experience</h2>
-          </AnimateIn>
-          <div className="space-y-8">
-            <ul className="space-y-8">
-              {visibleExperience.map((job, index) => {
-                const delay = 0.5 + (index < initialExperienceCount ? index : index - initialExperienceCount) * 0.1;
-                return (
-                  <AnimateIn key={index} variant="fadeLeft" delay={delay}>
-                    <li className="group hover:translate-x-1 transition-all duration-300 ease-out">
-                      <div className="flex flex-col sm:flex-row sm:items-baseline justify-between mb-1">
-                        <h3 className="text-md font-medium">
-                          {job.role} {job.role === "Freelance" ? "" : "at"} {job.company}
-                        </h3>
-                        <span className="text-xs text-zinc-400 dark:text-zinc-500">{job.period}</span>
-                      </div>
-                      <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-2">{job.description}</p>
-                      <div className="flex flex-wrap gap-2">
-                        {job.technologies.map((tech, techIndex) => (
-                          <span key={techIndex} className="text-xs text-zinc-400 dark:text-zinc-500">
-                            {tech}
-                            {techIndex < job.technologies.length - 1 ? " /" : ""}
-                          </span>
-                        ))}
-                      </div>
-                    </li>
-                  </AnimateIn>
-                );
-              })}
-            </ul>
-            {experience.length > initialExperienceCount && (
-              <button
-                onClick={() => setIsExperienceExpanded(!isExperienceExpanded)}
-                className="flex items-center gap-2 text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors mx-auto"
-              >
-                {isExperienceExpanded ? (
-                  <>
-                    Show Less <ChevronUp className="w-4 h-4" />
-                  </>
-                ) : (
-                  <>
-                    Show More Experience <ChevronDown className="w-4 h-4" />
-                  </>
-                )}
-              </button>
-            )}
           </div>
         </section>
       </AnimateIn>
