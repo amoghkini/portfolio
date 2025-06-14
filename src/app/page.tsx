@@ -6,6 +6,7 @@ import { AnimateIn } from "@/components/animations/AnimateIn";
 import { ExternalLink, ChevronDown, ChevronUp } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
+import { desc } from "motion/react-client";
 
 export default function Home() {
   // const [isProjectsExpanded, setIsProjectsExpanded] = useState(false);
@@ -29,7 +30,7 @@ export default function Home() {
           </AnimateIn>
           <AnimateIn variant="fadeUp" delay={0.4}>
             <p className="text-sm text-zinc-600 dark:text-zinc-400 max-w-xl mb-6">
-              London-based full-stack developer passionate about crafting exceptional digital experiences. I transform complex challenges into elegant,
+              India-based backend developer with 6+ years of experience passionate about crafting exceptional digital experiences. I transform complex challenges into elegant,
               user-centric solutions.
             </p>
           </AnimateIn>
@@ -198,118 +199,59 @@ export default function Home() {
 
 const projects = [
   {
-    title: "oss.now",
-    description: "A place to share your open source projects and find new ones.",
+    title: "Stock Exchange",
+    description: "A stock exchange platform for trading and investing.",
     link: "https://oss.now",
-    github: "https://github.com/ahmetskilinc/ossdotnow",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI", "Payload CMS", "Postgres"],
+    github: "https://github.com/amoghkini/Stock-Exchange",
+    technologies: ["Python", "Flask", "FastAPI", "Django", "Docker", "Postgres"],
   },
   {
-    title: "UI Registry",
-    description: "A simple UI registry for components and blocks using the shadcn api.",
+    title: "Algo Trader",
+    description: "A trading platform for algorithmic trading.",
     link: "https://l.ahmet.studio/ui",
-    github: "https://l.ahmet.studio/gh",
+    github: "https://github.com/amoghkini/Algo-Trading-Framework",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI"],
-  },
-  {
-    title: "E-commerce Platform",
-    description: "A full-featured e-commerce platform with product management, cart functionality, and payment processing.",
-    link: "https://payload-ecommerce-app.vercel.app/",
-    github: "https://github.com/ahmetskilinc/payload-ecommerce",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Payload CMS", "Stripe"],
   },
   {
     title: "Portfolio Website",
     description: "A minimalist portfolio website showcasing projects and skills with a clean, responsive design.",
     link: "https://dub.sh/ahmet/",
+    github: "https://github.com/amoghkini/portfolio",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
-  },
-  {
-    title: "Work Hours Tracker - web",
-    description: "A collaborative task management web application with real-time updates and team functionality.",
-    link: "https://work-hours-tracker-chi.vercel.app/",
-    github: "https://github.com/ahmetskilinc/work-hours-web",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Web Sockets", "Supabase"],
-  },
-  {
-    title: "Work Hours Tracker - mobile",
-    description: "A collaborative task management mobile application with real-time updates and team functionality.",
-    github: "https://github.com/ahmetskilinc/work-hours-app",
-    technologies: ["Expo", "React Native", "TypeScript", "Web Sockets", "Supabase"],
-  },
-  {
-    title: "Payload CMS Appointment Scheduling Plugin",
-    description: "A plugin for Payload CMS that allows users to schedule appointments.",
-    github: "https://github.com/ahmetskilinc/payload-appointments-plugin",
-    technologies: ["Next.js", "TypeScript", "Payload CMS"],
-  },
-  {
-    title: "Payload CMS Media Grid View Plugin",
-    description: "A plugin for Payload CMS that allows users to view media in a grid view.",
-    github: "https://github.com/ahmetskilinc/payload-media-grid-plugin",
-    technologies: ["Next.js", "TypeScript", "Payload CMS"],
-  },
+  }
 ];
 
 const experience = [
   {
-    role: "Software Engineer",
-    company: "Zero Email Inc. (US, remote)",
-    period: "Feb 2025 - Present",
+    role: "Post Trade Analyst",
+    company: "Barclays Investments",
+    period: "June 2023 - Present",
     description:
-      "Software engineer responsible for core features and performance optimisations for an innovative AI-powered email client, focusing on intelligent email processing and real-time collaboration.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Postgres", "Google APIs"],
+      "Analyzing and interpreting complex financial data to provide insights and recommendations for investment portfolios.",
+    technologies: ["Python", "Spark", "Hadoop", "impala", "flask", "Pandas", "NumPy", "Matplotlib", "postgresql"],
   },
   {
-    role: "Freelance Developer",
-    period: "Mar 2024 - May 2025",
+    role: "Data Analyst",
+    company: "Institutional Shareholder Services",
+    period: "August 2022 - May 2023",
     description:
-      "Delivering custom web solutions for diverse clients, specialising in e-commerce platforms, content management systems, and business automation tools.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Postgres", "MongoDB", "PayloadCMS", "Google APIs"],
+      "Analyzing and interpreting complex financial data to provide insights and recommendations for investment portfolios.",
+    technologies: ["Python", "Pandas", "NumPy", "Matplotlib", "postgresql"],
   },
   {
-    role: "Front End Developer",
-    company: "Executives Place",
-    period: "Oct 2023 - Feb 2024",
-    description: "Developed and maintained multiple features for the SaaS product, from performance improvements to new features.",
-    technologies: ["Vue.js", "Node.js", "Laravel", "SQL"],
+    role: "Backend Developer",
+    company: "Tata Consultancy Services",
+    period: "August 2019 - August 2022",
+    description: "Developed and maintained the core banking solutions for the company.",
+    technologies: ["Python", "Java", "Oracle", "SQL"],
   },
-  {
-    role: "Full Stack Developer",
-    company: "XLN Telecom (Daisy Comms)",
-    period: "Nov 2020 - Aug 2023",
-    description: "Developed and maintained the company brochure site to guide and increase sales.",
-    technologies: ["Vue.js", "Nuxt.js", "JavaScript", "SQL", "MongoDB", "C#", "ASP.NET", "WordPress"],
-  },
-  {
-    role: "Junior Web Developer",
-    company: "Absowebly",
-    period: "Jul 2018 - Sep 2018",
-    description: "Developing and maintaining client websites with a proprietary CMS.",
-    technologies: ["PHP", "HTML", "CSS", "JavaScript", "Sass"],
-  },
+
 ];
 
 const tools = [
   {
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
     title: "React",
-  },
-  {
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
-    title: "NextJS",
-  },
-  {
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/reactrouter/reactrouter-original.svg",
-    title: "React Router",
-  },
-  {
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
-    title: "VueJS",
-  },
-  {
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original.svg",
-    title: "NuxtJS",
   },
   {
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
@@ -320,32 +262,8 @@ const tools = [
     title: "CSS",
   },
   {
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-    title: "Javascript",
-  },
-  {
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-    title: "Typescript",
-  },
-  {
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trpc/trpc-original.svg",
-    title: "TRPC",
-  },
-  {
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
-    title: "Google Cloud",
-  },
-  {
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
     title: "AWS",
-  },
-  {
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-    title: "NodeJS",
-  },
-  {
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bun/bun-original.svg",
-    title: "Bun",
   },
   {
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
@@ -355,28 +273,13 @@ const tools = [
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cloudflare/cloudflare-original.svg",
     title: "Cloudflare",
   },
-  {
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg",
-    title: "Vercel",
-  },
+
   {
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
     title: "Sass",
   },
   {
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
-    title: "TailwindCSS",
-  },
-  {
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
     title: "GIT",
-  },
-  {
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
-    title: "Figma",
-  },
-  {
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sketch/sketch-original.svg",
-    title: "Sketch",
   },
 ];

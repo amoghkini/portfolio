@@ -1,5 +1,5 @@
 # portfolio Template taken from
-[text](https://github.com/ahmetskilinc/portfolio-new-new-new-new)
+The portfolio template is taken from [here](https://github.com/ahmetskilinc/portfolio-new-new-new-new)
 
 ## To build
 
